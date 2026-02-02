@@ -1,0 +1,42 @@
+Calculadora de aportes a seguridad social (trabajadores dependientes)
+
+Descripción
+- Calcula los valores mensuales a pagar por Salud, Pensión, ARL y Caja de compensación para trabajadores dependientes.
+- Muestra los resultados por concepto y el total.
+
+Cómo funciona el cálculo
+- Salud: 4% del salario.
+- Pensión: 16% del salario.
+- Caja de compensación: 4% del salario.
+- ARL según riesgo:
+  Riesgo 1 → 0,52%
+  Riesgo 2 → 1,04%
+  Riesgo 3 → 2,44%
+  Riesgo 4 → 4,35%
+  Riesgo 5 → 6,96%
+- Cada valor: valor = salario × porcentaje.
+- Total: suma de los cuatro conceptos.
+
+Validaciones
+- El salario debe ser positivo y no puede ser menor al salario mínimo legal vigente.
+- El nivel de riesgo ARL es obligatorio.
+- Si hay errores, se muestran mensajes claros y no se presentan resultados.
+
+Tecnologías
+- HTML para la estructura del formulario y resultados.
+- CSS para estilos y diseño responsivo.
+- JavaScript para validaciones y cálculos.
+
+Cómo ejecutar
+- Abra el archivo index.html en un navegador moderno (Chrome, Edge, Firefox).
+- Ingrese el salario mensual y seleccione el nivel de riesgo ARL.
+- Presione “Calcular aportes”.
+
+Configuración del salario mínimo
+- El valor del salario mínimo legal vigente se define en script.js como la constante SMMLV.
+- Actualice SMMLV según corresponda antes de usar la calculadora.
+
+Alcance y límites
+- Solo para trabajadores dependientes.
+- No se guardan datos ni se realizan pagos.
+- Uso informativo.
