@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de aportes – Dependientes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<header class="encabezado">
+<h1>Calculadora de aportes – Dependientes</h1>
+<p class="lead">Conozca cuánto debe pagar mensualmente por Salud, Pensión, ARL y Caja de compensación según su salario y nivel de riesgo ARL.</p>
+<p class="note">Aplica solo para trabajadores dependientes</p>
+</header>
+
+<form id="form-aportes" class="form" novalidate>
+<div class="field">
+<label for="salario">Salario mensual</label>
+<input type="text" id="salario" name="salario" placeholder="1.750.905,00" required oninput="formatInputCOP(this)">
+<p id="min-info" class="helper">Salario mínimo vigente: 1.750.905 COP</p>
+</div>
+
+<div class="field">
+<label for="riesgo">Nivel de riesgo ARL</label>
+<select id="riesgo" name="riesgo" required>
+<option value="" selected>Seleccione</option>
+<option value="1">Riesgo 1</option>
+<option value="2">Riesgo 2</option>
+<option value="3">Riesgo 3</option>
+<option value="4">Riesgo 4</option>
+<option value="5">Riesgo 5</option>
+</select>
+</div>
+
+<button type="submit" id="btn-calcular" class="btn">Calcular aportes</button>
+</form>
+
+<div id="errores" class="errores" aria-live="polite"></div>
+
+<section id="resultados" class="resultados oculto">
+<h2>Resultados</h2>
+<div class="resultado-item"><span>Salud (4%)</span><strong id="v-salud"></strong></div>
+<div class="resultado-item"><span>Pensión (16%)</span><strong id="v-pension"></strong></div>
+<div class="resultado-item"><span>ARL</span><strong id="v-arl"></strong></div>
+<div class="resultado-item"><span>Caja de compensación (4%)</span><strong id="v-caja"></strong></div>
+<div class="resultado-item total"><span>Total a pagar</span><strong id="v-total"></strong></div>
+</section>
+<p class="legal">Cálculo informativo basado en normativa colombiana vigente</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
